@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Echoes Limited | Quality Assurance</title>
+<meta name="description" content="External quality assessment programs and compliance support for modern laboratories.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&amp;fit=crop&amp;w=2400&amp;q=85">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+ <div class="wrap bar">
+  <a href="index.html" class="logo"><img class="brand-mark" src="logo-mark.svg" alt=""><span class="brand-name">ECHOES<span>LIMITED</span></span></a>
+  <button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main">
+   <ul>
+    <li><a href="index.html">Home</a></li>
+    <li class="nav-dropdown"><details>
+     <summary>Solutions &amp; Services</summary>
+     <ul class="nav-submenu">
+      <li><a href="solutions.html">All Solutions</a></li>
+    <li><a href="solutions.html#technical-consulting">Technical Consulting</a></li>
+    <li><a href="solutions.html#executive-corporate-training">Executive Corporate Training</a></li>
+    <li><a href="solutions.html#rca-resources">RCA Resources</a></li>
+     </ul>
+    </details></li>
+    <li><a href="quality.html">Quality assurance</a></li>
+    <li><a href="why-us.html">Why us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+   </ul>
+  </nav>
+  <a class="header-cta" href="contact.html">Request a quote</a>
+ </div>
+</header>
+
+<main>
+<section class="hero photo-hero quality-hero">
+ <div class="wrap">
+  <p class="eyebrow">Quality assurance</p>
+  <h1>External quality assessment that supports confidence and compliance.</h1>
+  <p>Join comprehensive EQA programs that help your laboratory meet international quality standards and improve performance through measurable benchmarks.</p>
+  <div class="hero-actions">
+   <a class="btn" href="contact.html">Enroll your laboratory</a>
+  </div>
+ </div>
+</section>
+
+<section class="quality-section">
+ <div class="wrap quality-layout">
+  <div class="quality-copy">
+   <p class="eyebrow">Why it matters</p>
+   <h2>Reliable testing starts with objective verification.</h2>
+   <p>We partner with external quality assessment providers to deliver schemes that support ISO 15189 compliance, clinical confidence, and continuous quality improvement.</p>
+  </div>
+  <div class="eqa-panel">
+   <h3>Programs for your laboratory</h3>
+   <ul class="eqa-list">
+    <li><span>Hematology EQA</span><strong>150+ labs</strong></li>
+    <li><span>Chemistry EQA</span><strong>200+ labs</strong></li>
+    <li><span>Microbiology EQA</span><strong>80+ labs</strong></li>
+    <li><span>Immunology EQA</span><strong>120+ labs</strong></li>
+    <li><span>Blood Bank EQA</span><strong>60+ labs</strong></li>
+   </ul>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap footer-content">
+  <div class="footer-about">
+  <a class="footer-brand" href="index.html"><img class="brand-mark" src="logo-mark.svg" alt=""><span class="brand-name">ECHOES<span>LIMITED</span></span></a>
+   <p>Supporting laboratories with quality systems, EQA programs, technical support, and training for better outcomes.</p>
+  </div>
+   </div>
+   <div class="wrap footer-social-row">
+    <nav class="social-links" aria-label="Social and contact links">
+     <a href="https://wa.me/254700000000" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7A8.5 8.5 0 1 1 20.5 11.8Z"/><path d="M8.4 7.8c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .6.4.7 1.1 1.4 1.8 1.8.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.3.5 0 .3-.2 1.1-.7 1.4-.5.4-1.1.5-1.8.3-.8-.2-1.8-.7-2.9-1.7-1.3-1.1-2.1-2.4-2.4-3.3-.3-.9-.1-1.8.5-2.4Z"/></svg></a>
+     <a href="mailto:info@echoes.example" aria-label="Email Echoes Limited" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a>
+     <a href="https://www.linkedin.com/search/results/companies/?keywords=Echoes%20Limited" aria-label="Find Echoes Limited on LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8.5v10M5 5.5v.1M9.5 18.5v-6a3 3 0 0 1 6 0v6M9.5 10v8.5M3 3h18v18H3z"/></svg></a>
+    </nav>
+ </div>
+</footer>
+<div id="toast" role="status"></div>
+<script>
+const menu = document.getElementById("menu");
+const nav = document.getElementById("nav");
+
+if (menu && nav) {
+ menu.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("open");
+  menu.setAttribute("aria-expanded", String(isOpen));
+ });
+
+ nav.addEventListener("click", event => {
+  if (event.target.closest("a")) {
+   nav.classList.remove("open");
+   menu.setAttribute("aria-expanded", "false");
+  }
+ });
+}
+</script>
+</body>
+</html>
